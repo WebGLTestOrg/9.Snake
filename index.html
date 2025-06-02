@@ -1,14 +1,18 @@
 <!doctype html>
 <html>
 <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>Snake</title>
+
     <link rel="stylesheet" type="text/css" href="./css/styles.css?v=1.12">
     <link rel="manifest" href="./json/manifest.json?v=1.12">
-    <title>Snake</title>
+
+    <!-- PlayCanvas engine -->
     <script src="./js/playcanvas-stable.min.js?v=1.12"></script>
     <script src="engine-patch.js"></script>
     <script src="./build/__settings__.js?v=1.12"></script>
+
     <style>
         html, body {
             margin: 0;
@@ -16,19 +20,21 @@
             overflow: hidden;
             height: 100%;
             width: 100%;
-            background: black;
         }
 
-        canvas {
+        canvas#application-canvas {
             display: block;
             width: 100%;
             height: 100%;
+            background-color: #000;
         }
     </style>
 </head>
 <body>
+    <!-- Canvas for PlayCanvas -->
     <canvas id="application-canvas"></canvas>
 
+    <!-- PlayCanvas app scripts -->
     <script src="./js/__modules__.js?v=1.12"></script>
     <script src="./js/__start__.js?v=1.12"></script>
     <script src="./js/__loading__.js?v=1.12"></script>
